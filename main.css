@@ -4,6 +4,13 @@
     box-sizing: border-box;    
 }
 
-div{
-    background-color: red;
+body{
+   text-align: center; 
+   /* background-color: blue;  */
+}
+
+
+
+.container{
+    text-align: center;
 }
