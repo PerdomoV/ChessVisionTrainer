@@ -120,3 +120,15 @@ a{
 #timer{
     font-size: 21px;
 }
+
+.container2 > strong{
+    font-size: 30px;
+}
+
+.container2 > .reglas{
+    font-size: 22px;
+}
+
+.container2 > p{
+    font-size: 21px;
+}
