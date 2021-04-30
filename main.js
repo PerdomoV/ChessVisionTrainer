@@ -28,10 +28,9 @@ intentar.addEventListener("click", () => {
 });
 
 light.addEventListener("click", () => {
-    const escaqueYcolor = escaqueAndColor();
     
     if(light.className.split(" ")[1] === escaqueYcolor[1]){
-        console.log(escaqueYcolor);
+        escaqueYcolor = escaqueAndColor();
         casilla.innerHTML=`${escaqueYcolor[0]}`;
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
@@ -52,10 +51,9 @@ light.addEventListener("click", () => {
 });
 
 dark.addEventListener("click", () => {
-    const escaqueYcolor = escaqueAndColor();
 
     if(dark.className.split(" ")[1] === escaqueYcolor[1]){
-        console.log(escaqueYcolor);
+        escaqueYcolor = escaqueAndColor();
         casilla.innerHTML=`${escaqueYcolor[0]}`;  
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
