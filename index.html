@@ -9,24 +9,19 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="app"> -->
         <header class="header">
             <h1>Entrenador de visualización del tablero de ajedrez</h1>
             <br>
         </header>
-        <!-- o -->
         <br>
         <br>
 
-        <!-- o -->
         <div class="container">
             <!-- Instrucciones -->
             <div class='container2 instrucciones' id='container2'>
-                <!-- <a href="./juego.html"> -->
                 <button id='intentar' class='btn green'> 
                     <span> Comenzar </span>
                 </button>
-                <!-- </a> -->
                 <br>
                 
                 <strong class='reglas'>Reglas</strong>
@@ -51,17 +46,7 @@
                         </p>
                     </li>
                 </ol>
-                <!-- <p>Se muestra la coordenada de un cuadrado, por ejemplo, "a1" o "d4".
-                    
-                    Si ese cuadrado en el tablero es blanco, haz clic en el cuadro blanco (izquierda).
-                    
-                    Si ese cuadrado en el tablero es oscuro, haz clic en el cuadro verde (derecha).
-                    
-                    Te pierdes uno y tienes que empezar de nuevo.
-                    
-                    Consigue 25 aciertos seguidos para ganar.
-                    
-                </p> -->   
+                
             </div>
             <!-- Juego: -->
             <div class="container2 hidden game-container" id="container2">
@@ -82,7 +67,6 @@
                 <div id='timer'>
                     <strong>35:00 seg</strong>
                 </div> 
-                <!-- <script src='./src/game.js'></script> -->
             </div>
             <!-- Fallo: -->
 
@@ -90,7 +74,7 @@
                 <strong> ¡FALLASTE! </strong>
                 <br>
                 <br>
-                <p> g5 es oscura </p>
+                <p id="errorDeCasilla"> g5 es oscura </p>
                 <br>
                 <br>
                 <a href="./juego.html">
@@ -116,6 +100,6 @@
              </div>
 
         </div>    
-        <script src='./src/main.js'></script>
+        <script type="module" defer src='./main.js' ></script>
     </body>
 </html>
