@@ -8,8 +8,13 @@ var light = document.getElementById("light");
 var dark = document.getElementById("dark");
 var gameContainer = document.getElementsByClassName("game-container")[0];
 var falloContainer = document.getElementsByClassName("fallo-container")[0];
+
 var errorDeCasilla = document.getElementById("errorDeCasilla");
 var resultadoContainer = document.getElementsByClassName("resultado-container")[0];
+var reintentar = document.getElementsByClassName("reintentar")[0];
+var reintentar2 = document.getElementsByClassName("reintentar2")[0];
+
+
 
 
 //Variables del juego
@@ -26,6 +31,29 @@ intentar.addEventListener("click", () => {
     casilla.innerHTML=`${escaqueYcolor[0]}`;
     
 });
+
+reintentar.addEventListener("click", () => {
+    falloContainer.classList.add("hidden");
+    gameContainer.classList.remove("hidden");
+       
+    escaqueYcolor = escaqueAndColor();
+    console.log(escaqueYcolor);
+     
+    casilla.innerHTML=`${escaqueYcolor[0]}`;
+    
+});
+
+reintentar2.addEventListener("click", () => {
+    resultadoContainer.classList.add("hidden");
+    gameContainer.classList.remove("hidden");
+       
+    escaqueYcolor = escaqueAndColor();
+    console.log(escaqueYcolor);
+     
+    casilla.innerHTML=`${escaqueYcolor[0]}`;
+    
+});
+
 
 light.addEventListener("click", () => {
     
@@ -66,7 +94,6 @@ dark.addEventListener("click", () => {
     else{
         falloContainer.classList.remove("hidden");
         gameContainer.classList.add("hidden");
-
         errorDeCasilla.innerHTML = `${escaqueYcolor[0]} es Clara`;
         console.log(contadorDeAciertos);
     }
