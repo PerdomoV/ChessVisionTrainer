@@ -132,3 +132,7 @@ a{
 .container2 > p{
     font-size: 21px;
 }
+
+.hidden{
+    display: none;
+}

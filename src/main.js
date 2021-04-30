@@ -1,33 +1,20 @@
-var juego = ` <strong id='casilla'>
-g5
-</strong>
-<br>
-<br>
-<div class='colors'>
-<div class='color light' id='light'>
-
-</div>
-<div class='color dark' id='dark'>
-
-</div>
-</div>
-<br>
-<br>
-
-<div id='timer'>
-<strong>35:00 seg</strong>
-</div> 
-<script src='src/game.js'></script>
-`;
-
-
-var container2 = document.getElementById("container2");
-
+var instrucciones = document.getElementsByClassName("instrucciones")[0];
 var intentar = document.getElementById("intentar");
 
+var light = document.getElementById("light");
+var dark = document.getElementById("dark");
+var gameContainer = document.getElementsByClassName("game-container")[0];
+
+
 intentar.addEventListener("click", () => {
-    container2.innerHTML = juego;
+    instrucciones.classList.add("hidden");
+    gameContainer.classList.remove("hidden"); 
 });
 
+light.addEventListener("click", () => {
+    console.log("light");
+});
 
-
+dark.addEventListener("click", () => {
+    console.log("dark");
+});
