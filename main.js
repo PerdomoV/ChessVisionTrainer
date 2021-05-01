@@ -23,7 +23,7 @@ var timekeeper= document.getElementById("timekeeper");
 
 //Variables del juego
 var escaqueYcolor = [];
-var contadorDeAciertos = 29;
+var contadorDeAciertos = 0;
 var crono = new cronometro(clock);
 
 intentar.addEventListener("click", () => {
