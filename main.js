@@ -1,4 +1,6 @@
 import escaqueAndColor from "./game.js";
+import cronometro from "./timer.js";
+
 
 // Elementos HTML
 var instrucciones = document.getElementsByClassName("instrucciones")[0];
@@ -13,45 +15,43 @@ var errorDeCasilla = document.getElementById("errorDeCasilla");
 var resultadoContainer = document.getElementsByClassName("resultado-container")[0];
 var reintentar = document.getElementsByClassName("reintentar")[0];
 var reintentar2 = document.getElementsByClassName("reintentar2")[0];
+var clock = document.getElementById("clock");
 
 
 
 
 //Variables del juego
 var escaqueYcolor = [];
-var contadorDeAciertos = 0;
+var contadorDeAciertos = 29;
+var crono = new cronometro(clock);
 
 intentar.addEventListener("click", () => {
     instrucciones.classList.add("hidden");
     gameContainer.classList.remove("hidden");
-       
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
-     
+    crono.start();
     casilla.innerHTML=`${escaqueYcolor[0]}`;
-    
 });
 
 reintentar.addEventListener("click", () => {
     falloContainer.classList.add("hidden");
     gameContainer.classList.remove("hidden");
-       
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
-     
+    crono.restart();
+    crono.start();
     casilla.innerHTML=`${escaqueYcolor[0]}`;
-    
 });
 
 reintentar2.addEventListener("click", () => {
     resultadoContainer.classList.add("hidden");
-    gameContainer.classList.remove("hidden");
-       
+    gameContainer.classList.remove("hidden");     
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
-     
+    crono.restart();
+    crono.start();
     casilla.innerHTML=`${escaqueYcolor[0]}`;
-    
 });
 
 
@@ -70,6 +70,8 @@ light.addEventListener("click", () => {
     }
 
     else{
+        crono.stop();
+        crono.restart();
         falloContainer.classList.remove("hidden");
         gameContainer.classList.add("hidden");
         errorDeCasilla.innerHTML = `${escaqueYcolor[0]} es Oscura`;
@@ -92,6 +94,8 @@ dark.addEventListener("click", () => {
         
     }
     else{
+        crono.stop();
+        crono.restart();
         falloContainer.classList.remove("hidden");
         gameContainer.classList.add("hidden");
         errorDeCasilla.innerHTML = `${escaqueYcolor[0]} es Clara`;
