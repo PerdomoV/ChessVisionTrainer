@@ -16,6 +16,7 @@ var resultadoContainer = document.getElementsByClassName("resultado-container")[
 var reintentar = document.getElementsByClassName("reintentar")[0];
 var reintentar2 = document.getElementsByClassName("reintentar2")[0];
 var clock = document.getElementById("clock");
+var timekeeper= document.getElementById("timekeeper");
 
 
 
@@ -46,12 +47,15 @@ reintentar.addEventListener("click", () => {
 
 reintentar2.addEventListener("click", () => {
     resultadoContainer.classList.add("hidden");
+    
     gameContainer.classList.remove("hidden");     
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
+    casilla.innerHTML=`${escaqueYcolor[0]}`;
+    crono.stop();
     crono.restart();
     crono.start();
-    casilla.innerHTML=`${escaqueYcolor[0]}`;
+
 });
 
 
@@ -63,6 +67,9 @@ light.addEventListener("click", () => {
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
         if(contadorDeAciertos >= 30){
+            crono.stop()
+            let t = crono.getSeconds();
+            timekeeper.innerHTML = `${t} seg`;
             resultadoContainer.classList.remove("hidden");
             gameContainer.classList.add("hidden");
         }
@@ -88,6 +95,9 @@ dark.addEventListener("click", () => {
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
         if(contadorDeAciertos >= 30){
+            crono.stop()
+            let t = crono.getSeconds();
+            timekeeper.innerHTML = `${t} seg`;
             resultadoContainer.classList.remove("hidden");
             gameContainer.classList.add("hidden");
         }

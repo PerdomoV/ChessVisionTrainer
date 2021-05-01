@@ -13,8 +13,9 @@ export default class cronometro{
         console.log(this.s)
     }
     restart(){
-        this.parent.innerHTML = `00`
         this.s=0;
+
+        this.parent.innerHTML = `${this.s}`;
     }
     getSeconds(){
         return this.s;
