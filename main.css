@@ -20,6 +20,8 @@ header{
    align-items: center;
    justify-content: center;
    height: 50px;
+   margin: 2px;
+
    /* padding-left: 7px;    */
 }
 
@@ -140,12 +142,19 @@ a{
 
 @media screen and (max-width: 480px) {
    header{
-        height: 100px;
+        height: ;
    }
 }
 
 @media screen and (max-width: 320px) {
     header{
-         height: 110px;
+         height: 100%;
+         width: 100%;
     }
 }
+
+@media screen and (max-width: 598px) {
+    header{
+         height: 90px;
+    }
+   }
