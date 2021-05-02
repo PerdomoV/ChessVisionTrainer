@@ -27,12 +27,14 @@ var contadorDeAciertos = 0;
 var crono = new cronometro(clock);
 
 intentar.addEventListener("click", () => {
+    
     instrucciones.classList.add("hidden");
     gameContainer.classList.remove("hidden");
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
     crono.start();
     casilla.innerHTML=`${escaqueYcolor[0]}`;
+    contadorDeAciertos = 0;
 });
 
 reintentar.addEventListener("click", () => {
@@ -43,6 +45,8 @@ reintentar.addEventListener("click", () => {
     crono.restart();
     crono.start();
     casilla.innerHTML=`${escaqueYcolor[0]}`;
+    contadorDeAciertos = 0;
+
 });
 
 reintentar2.addEventListener("click", () => {
@@ -52,6 +56,8 @@ reintentar2.addEventListener("click", () => {
     escaqueYcolor = escaqueAndColor();
     console.log(escaqueYcolor);
     casilla.innerHTML=`${escaqueYcolor[0]}`;
+    contadorDeAciertos = 0;
+
     crono.stop();
     crono.restart();
     crono.start();
