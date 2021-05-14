@@ -17,6 +17,7 @@ var reintentar = document.getElementsByClassName("reintentar")[0];
 var reintentar2 = document.getElementsByClassName("reintentar2")[0];
 var clock = document.getElementById("clock");
 var timekeeper= document.getElementById("timekeeper");
+let showCounter = document.getElementById("showCounter");
 
 
 
@@ -72,6 +73,7 @@ light.addEventListener("click", () => {
         casilla.innerHTML=`${escaqueYcolor[0]}`;
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
+        showCounter.innerHTML = `${contadorDeAciertos}`
         if(contadorDeAciertos >= 30){
             crono.stop()
             let t = crono.getSeconds();
@@ -100,6 +102,8 @@ dark.addEventListener("click", () => {
         casilla.innerHTML=`${escaqueYcolor[0]}`;  
         contadorDeAciertos += 1;
         console.log(contadorDeAciertos);
+        showCounter.innerHTML = `${contadorDeAciertos}`
+
         if(contadorDeAciertos >= 30){
             crono.stop()
             let t = crono.getSeconds();
