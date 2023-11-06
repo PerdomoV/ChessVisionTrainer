@@ -1,172 +1,186 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-    text-rendering: optimizeLegibility;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
-body{
-   background-color: #f6f6f6;
-   text-align: center;
-   font-family: 'Lato', sans-serif;
-
-}
-
-header{
-   margin-top: 3px;
-   background: linear-gradient(to left, #1c3643 0%, #273b47 25%, #1e5372 100%);
-   color: #EAECED;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 50px;
-   margin: 0px;
-
-   /* padding-left: 7px;    */
-}
-
-h1{
-    font-size: 25px;
-}
-
-a{
-    text-decoration: none;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-}
-
-.container2{
-    width: 376px;
-    background-color: #fff;
-    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 8%);  
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 24px 40px 24px 40px;
-}
-
-.btn{
-    display: block;
-    width: 100%;
-    padding: 14px 0;
-    color: rgb(255,243,243);
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 3px;
-    cursor: pointer;
-    text-transform: uppercase;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;  
-}
-
-.btn:hover, .btn:focus, .btn:active{
-    box-shadow: 0 0 20px rgba(0,0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);  
-}
-
-.green{
-    border: rgb(149,202,62) solid;
-    background: linear-gradient(to left, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
-    box-shadow: 0 1px 1px 0 #58902d;
-    color: black;
-}
-
-.colors{
-    height: 80%;
-    width: 100%;
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
-}
-
-.color{
-    width: 100px;
-    height: 100px;
-    border: 2px solid;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;  
-    
-}
-
-.color:hover, .color:active, .color:focus{
-    box-shadow: 0 0 20px rgba(0,0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);  
-}
-
-.light{
-    background: rgb(238, 238, 210);
-    cursor: pointer;
+body {
+  background-color: #f6f6f6;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 
 }
 
-.dark{
-    background: rgb(118, 150, 86);
-    cursor: pointer;
+header {
+  margin-top: 3px;
+  background: linear-gradient(to left, #1c3643 0%, #273b47 25%, #1e5372 100%);
+  color: #EAECED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0px;
+
+  /* padding-left: 7px;    */
 }
 
-#casilla{
-    font-size: 25px;
+h1 {
+  font-size: 25px;
 }
 
-#timer{
-    font-size: 21px;
+a {
+  text-decoration: none;
 }
 
-.container2 > strong{
-    font-size: 30px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
 }
 
-.container2 > .reglas{
-    font-size: 22px;
+.container2 {
+  width: 376px;
+  background-color: #fff;
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 8%);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 24px 40px 24px 40px;
 }
 
-.container2 > p{
-    font-size: 21px;
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  color: rgb(255, 243, 243);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
 
-.hidden{
-    display: none;
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.green {
+  border: rgb(149, 202, 62) solid;
+  background: linear-gradient(to left, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  box-shadow: 0 1px 1px 0 #58902d;
+  color: black;
+}
+
+.colors {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+
+}
+
+.color:hover,
+.color:active,
+.color:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.light {
+  background: rgb(238, 238, 210);
+  cursor: pointer;
+
+}
+
+.dark {
+  background: rgb(118, 150, 86);
+  cursor: pointer;
+}
+
+#casilla {
+  font-size: 25px;
+}
+
+#timer {
+  font-size: 21px;
+}
+
+.container2>strong {
+  font-size: 30px;
+}
+
+.container2>.reglas {
+  font-size: 22px;
+}
+
+.container2>p {
+  font-size: 21px;
+}
+
+.hidden {
+  display: none;
+}
+
+.score-container {
+  margin-top: 2vh;
+  /* font-size: 1vh; */
+  text-transform: capitalize;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 
 @media screen and (max-width: 480px) {
-   header{
-        height: ;
-   }
+  header {
+    height: ;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    header{
-         height: 100%;
-         width: 100%;
-    }
+  header {
+    height: 100%;
+    width: 100%;
+  }
 
-    .color:hover, .color:active{
-        box-shadow: 0 0 20px rgba(0,0, 0, 0.5);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1); 
-    }
+  .color:hover,
+  .color:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 
-    .btn:hover, .btn:active{
-        box-shadow: 0 0 20px rgba(0,0, 0, 0.5);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);     
-    }
+  .btn:hover,
+  .btn:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (max-width: 598px) {
-    header{
-         height: 90px;
-    }
-   }
+  header {
+    height: 90px;
+  }
+}

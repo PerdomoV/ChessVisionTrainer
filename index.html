@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
 
-    <title>ChessVissionTrainer</title>
+  <title>ChessVissionTrainer</title>
 </head>
+
 <body>
-        <header class="header">
-            <h1>Entrenador de visualización del tablero de ajedrez</h1>
-            <br>
-        </header>
+  <header class="header">
+    <h1>Entrenador de visualización del tablero de ajedrez</h1>
+    <br>
+  </header>
+  <br>
+  <br>
+
+  <div class="container">
+    <!-- Instrucciones -->
+    <div class='container2 instrucciones' id='container2'>
+      <button id='intentar' class='btn green'>
+        <span> Comenzar </span>
+      </button>
+      <br>
+
+      <strong class='reglas'>Reglas</strong>
+      <br>
+      <br>
+      <ol>
+        <li>
+          <p>
+            Después de comenzar, selecciona el color de la casilla del tablero de ajedrez, que aparezca en la pantalla.
+          </p>
+        </li>
         <br>
+        <li>
+          <p>
+            Trata de obtener 30 aciertos en el menor tiempo posible.
+          </p>
+        </li>
         <br>
+        <li>
+          <p>
+            Si fallas, deberás empezar de nuevo.
+          </p>
+        </li>
+      </ol>
 
-        <div class="container">
-            <!-- Instrucciones -->
-            <div class='container2 instrucciones' id='container2'>
-                <button id='intentar' class='btn green'> 
-                    <span> Comenzar </span>
-                </button>
-                <br>
-                
-                <strong class='reglas'>Reglas</strong>
-                <br>
-                <br>
-                <ol>
-                    <li>
-                        <p> 
-                            Después de comenzar, selecciona el color de la casilla del tablero de ajedrez, que aparezca en la pantalla.
-                        </p>
-                    </li>
-                    <br>
-                    <li>
-                        <p> 
-                            Trata de obtener 30 aciertos en el menor tiempo posible.
-                        </p>
-                    </li>
-                    <br>
-                    <li>
-                        <p> 
-                            Si fallas, deberás empezar de nuevo.
-                        </p>
-                    </li>
-                </ol>
-                
-            </div>
-            <!-- Juego: -->
-            <div class="container2 hidden game-container" id="container2">
-                <strong id='casilla'>
-                    g5
-                </strong>
-                <br>
-                <br>
-                <div class='colors'>
-                    <div class='color dark' id='dark'>
-                    </div>
+    </div>
+    <!-- Juego: -->
+    <div class="container2 hidden game-container" id="container2">
+      <strong id='casilla'>
+        g5
+      </strong>
+      <br>
+      <br>
+      <div class='colors'>
+        <div class='color dark' id='dark'>
+        </div>
 
-                    <div class='color light' id='light'>
-                    </div>
-                </div>
-                <br>
-                <br>
-                
-                <div>
-                    <strong  id='clock'>0</strong>
-                    <strong> seg</strong>
-                </div> 
-            </div>
-            <!-- Fallo: -->
+        <div class='color light' id='light'>
+        </div>
+      </div>
+      <br>
+      <br>
 
-            <div class="container2 hidden fallo-container" id="container3">
-                <strong> ¡FALLASTE! </strong>
-                <br>
-                <br>
-                <p id="errorDeCasilla"> g5 es oscura </p>
-                <br>
-                <br>
-                 <button class="btn green reintentar"> 
-                     <span> REINTENTAR </span>
-                 </button>
-             </div>
+      <div>
+        <strong id='clock'>0</strong>
+        <strong> seg</strong>
+      </div>
 
-             <!-- Resultado: -->
-             <div class="container2 hidden resultado-container" id="container4">
-                <strong> ¡BIEN HECHO! </strong>
-                <br>
-                <br>
-                <p>Tiempo:</p>
-                <p id="timekeeper"> 0 seg </p>
-                <br>
-                <br>
-                 <button class="btn green reintentar2" id="reintentar"> 
-                     <span> REINTENTAR </span>
-                 </button>
-             </div>
+      <div class="score-container">
+        <strong id="score">Tienes 0 aciertos</strong>
+      </div>
+    </div>
+    <!-- Fallo: -->
 
-        </div>    
-        <script type="module" defer src='./main.js' ></script>
-    </body>
+    <div class="container2 hidden fallo-container" id="container3">
+      <strong> ¡FALLASTE! </strong>
+      <br>
+      <br>
+      <p id="errorDeCasilla"> g5 es oscura </p>
+      <br>
+      <div class="score-container">
+        <strong id="final-score-failed"></strong>
+      </div>
+      <br>
+      <button class="btn green reintentar">
+        <span> REINTENTAR </span>
+      </button>
+    </div>
+
+    <!-- Resultado: -->
+    <div class="container2 hidden resultado-container" id="container4">
+      <strong> ¡BIEN HECHO! </strong>
+      <br>
+      <br>
+      <p>Tiempo:</p>
+      <p id="timekeeper"> 0 seg </p>
+      <br>
+      <div class="score-container">
+        <strong id="final-score-success"></strong>
+      </div>
+      <br>
+      <button class="btn green reintentar2" id="reintentar">
+        <span> REINTENTAR </span>
+      </button>
+    </div>
+
+  </div>
+  <script type="module" defer src='./main.js'></script>
+</body>
+
 </html>
